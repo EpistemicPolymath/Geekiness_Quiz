@@ -1,0 +1,29 @@
+/* Styling :D */
+
+
+
+/*Imgs */
+
+
+#banner_img {
+
+    width: 850px;
+    height: 314px;
+
+}
+
+img {
+
+    width: 35%;
+    height: 35%;
+
+}
+
+/* Text Formatting */
+
+.bold_text{
+
+    font-weight: bold;
+
+
+}
