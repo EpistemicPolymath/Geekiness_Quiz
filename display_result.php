@@ -126,7 +126,7 @@ calculate_result($answers);
 # Function take array $answers as a parameter
 function calculate_result($answers){
     #Create Total Variable
-    $total = " ";
+    $total = 0;
 
     # Foreach Loop to add up Results
     foreach($answers as $key=>$variable){
