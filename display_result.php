@@ -20,8 +20,8 @@ $scores = [
     7 => array("Out at party or bar."=>0, "Gaming with friends"=>5, "Surfing the net or reading a book."=>10)
 ];
 
-#Create answers array
-$answers = [];
+#Create answers variable
+$answers_correct = 0;
 
 # For each score that corresponds to an inputs $offset
 foreach ($scores as $offset => $score) {
@@ -32,8 +32,8 @@ foreach ($scores as $offset => $score) {
         # If the expected response is what the response actually was...
         if ($key == $responses[$offset]) {
 
-            # Add the score to the $answers array
-            $answers[] = $score;
+            # Add the score to the $answers_correct counter
+            $answers_correct += $key;
 
             # Break from loop
             break;
@@ -44,33 +44,4 @@ foreach ($scores as $offset => $score) {
 
 }
 
-echo "<pre>";
-echo print_r($answers);
-echo "</pre>";
-
-# Call Function to calculate results with array $answers as argument
-calculate_result($answers);
-
-
-# Function take array $answers as a parameter
-function calculate_result($answers){
-    #Create Total Variable
-    $total = 0;
-
-    # Foreach Loop to add up Results
-    foreach($answers as $key=>$variable){
-
-        $total += $variable;
-
-        echo $variable . "<br />";
-        echo $total . "<br />";
-
-    }
-
-    #Begin comparison with total and create results page
-
-
-
-
-}
-
+echo "Answers correct: ".$answers_correct;
