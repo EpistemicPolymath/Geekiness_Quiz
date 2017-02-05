@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: EpistemicPolymath
- * Date: 2/4/2017
- * Time: 7:31 PM
- */
 
 #Variable to store user input
 $responses = [];
@@ -27,89 +21,25 @@ $scores = [
 ];
 
 #Create answers array
-
 $answers = [];
 
-#Question 1 Answer Placed in $answers
-foreach ($q1_answers as $key=>$variable){
+# For each score that corresponds to an inputs $offset
+foreach ($scores as $offset => $score) {
 
-    if ($key == $q1_response){
+    # For each score as its expected response and numeric value
+    foreach ($score as $key => $value) {
 
-        $answers[] = $variable;
-        break;
-    }
+        # If the expected response is what the response actually was...
+        if ($key == $responses[$offset]) {
 
-}
+            # Add the score to the $answers array
+            $answers[] = $score;
 
+            # Break from loop
+            break;
 
+        }
 
-
-#Question 2 Answer Placed in $answers
-foreach ($q2_answers as $key=>$variable){
-
-    if ($key == $q2_response){
-
-        $answers[] = $variable;
-        break;
-    }
-
-}
-
-
-
-#Question 3 Answer Placed in $answers
-foreach ($q3_answers as $key=>$variable){
-
-    if ($key == $q3_response){
-
-        $answers[] = $variable;
-        break;
-    }
-
-}
-
-
-
-#Question 4 Answer Placed in $answers
-foreach ($q4_answers as $key=>$variable){
-
-    if ($key == $q4_response){
-
-        $answers[] = $variable;
-        break;
-    }
-
-}
-
-#Question 5 Answer Placed in $answers
-foreach ($q5_answers as $key=>$variable){
-
-    if ($key == $q5_response){
-
-        $answers[] = $variable;
-        break;
-    }
-
-}
-
-#Question 6 Answer Placed in $answers
-foreach ($q6_answers as $key=>$variable){
-
-    if ($key == $q6_response){
-
-        $answers[] = $variable;
-        break;
-    }
-
-}
-
-#Question 7 Answer Placed in $answers
-foreach ($q7_answers as $key=>$variable){
-
-    if ($key == $q7_response){
-
-        $answers[] = $variable;
-        break;
     }
 
 }
