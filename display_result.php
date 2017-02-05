@@ -124,8 +124,10 @@ calculate_result($answers);
 
 # Function take array $answers as a parameter
 function calculate_result($answers){
+    #Create Total Variable
     $total = " ";
 
+    # Foreach Loop to add up Results
     foreach($answers as $key=>$variable){
 
         $total += $variable;
@@ -134,6 +136,9 @@ function calculate_result($answers){
         echo $total . "<br />";
 
     }
+
+    #Begin comparison with total and create results page
+
 
 
 
