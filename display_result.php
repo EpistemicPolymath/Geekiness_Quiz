@@ -115,8 +115,9 @@ foreach ($q7_answers as $key=>$variable){
 
 }
 
-echo print_r($answers) . "<br />";
-
+echo "<pre>";
+echo print_r($answers);
+echo "</pre>";
 
 # Call Function to calculate results with array $answers as argument
 calculate_result($answers);
