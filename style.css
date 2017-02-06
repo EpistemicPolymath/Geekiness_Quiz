@@ -49,6 +49,9 @@
     width: 640px;
     height: 480px;
     font-weight: bold;
-    color: red;
+    font-size: 100%;
+    /* Centering the block pf text */
+    margin-left: auto;
+    margin-right: auto;
 
 }

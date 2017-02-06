@@ -164,7 +164,7 @@ function calculate_result($answers)
 
         $geekiness_level = "Uber-Geek";
         $img = "<img class='center_img' src='img/uber_geek.jpg'>";
-        $description = "You are the gek supreme! You are likely to be interested in technology, science, gaming, 
+        $description = "You are the geek supreme! You are likely to be interested in technology, science, gaming, 
         and geeky media such as Sci-fi and fantasy. All the mean kids that used to laugh at you in high school 
         are now begging you for a job. Be proud of your geeky nature, for geeks shall inherit the Earth!";
 
@@ -180,7 +180,7 @@ function calculate_result($answers)
 <html>
 <head>
     <title>Geekiness Quiz Results</title>
-   <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" type="text/css" href="style.css?<?php echo time(); ?>" >
 </head>
 <body>
 <div class="main_div">
