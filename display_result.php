@@ -112,18 +112,13 @@ foreach ($q7_answers as $key => $variable) {
 
 // Testing measure print_r($answers) . "<br />";
 
-#Set Global Variables for use in and outside of a function
-global $geekiness_level;
-global $img;
-global $description;
-
 
 # Call Function to calculate results with array $answers as argument
-calculate_result($answers, $geekiness_level, $img, $description);
+calculate_result($answers);
 
 
 # Function take array $answers as a parameter
-function calculate_result($answers, $geekinnes_level, $img, $description)
+function calculate_result($answers)
 {
     #Create Total Variable
     $total = " ";
@@ -139,8 +134,10 @@ function calculate_result($answers, $geekinnes_level, $img, $description)
     }
 
     #Begin comparison with total and create results page
-    #Result Page Variable Creation
-
+    #Result Page Global Variable Creation
+    global $geekiness_level;
+    global $img;
+    global $description;
 
     If (($total >= 0) && ($total <= 10)) {
 
@@ -176,11 +173,6 @@ function calculate_result($answers, $geekinnes_level, $img, $description)
 
 }
 
-echo $geekiness_level;
-echo $img;
-echo $description;
-
-
 
 ?>
 <!-- HTML Page Creation -->
@@ -191,15 +183,14 @@ echo $description;
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<main>
-    <h1><?= $geekiness_level; ?></h1>
+
+<h1>Quiz Result: <?= $geekiness_level; ?></h1>
 
 
-    <span><?= $img; ?></span><br /> <br />
-    <?= $description; ?>
+<span><?= $img; ?></span><br/> <br/>
+<p class="p_formatting"><?= $description; ?></p>
 
 
-</main>
 </body>
 </html>
 
