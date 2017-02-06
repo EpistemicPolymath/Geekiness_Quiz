@@ -12,7 +12,7 @@
 
 }
 
-img {
+.img_style {
 
     width: 35%;
     height: 35%;
@@ -31,10 +31,24 @@ img {
 
 /* PHP HTML_CSS Formatting */
 
+.main_div {
 
+    text-align: center;
+    font-weight: bold;
+}
 
-.p_formatting{
+.center_img {
 
-    width: 25%;
+    display: block;
+    margin: auto;
+
+}
+
+.p_formatting {
+
+    width: 640px;
+    height: 480px;
+    font-weight: bold;
+    color: red;
 
 }

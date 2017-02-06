@@ -128,8 +128,8 @@ function calculate_result($answers)
 
         $total += $variable;
 
-       // echo $variable . "<br />";
-       // echo $total . "<br />";
+        // echo $variable . "<br />";
+        // echo $total . "<br />";
 
     }
 
@@ -142,7 +142,7 @@ function calculate_result($answers)
     If (($total >= 0) && ($total <= 10)) {
 
         $geekiness_level = "Non-Geek";
-        $img = "<img src='img/non_geek.jpg'>";
+        $img = "<img class='center_img' src='img/non_geek.jpg'>";
         $description = "There isn't a single geeky bone in your body. 
     You prefer to party rather than study, and have someone else fix your computer, if need be. 
     You're just too cool for this. You probably don't even wear glasses.";
@@ -153,7 +153,7 @@ function calculate_result($answers)
     if (($total >= 11) && ($total <= 50)) {
 
         $geekiness_level = "Semi-Geek";
-        $img = "<img src='img/semi_geek.jpg'>";
+        $img = "<img class='center_img' src='img/semi_geek.jpg'>";
         $description = "Maybe you're just influenced by the trend, or maybe you just got it all perfectly balanced. 
         You have some geeky traits, but they aren't nearly as \"hardcore\" and they don't take over your life. 
         You like some geeky things, but aren't nearly as obsessive about them as the uber-geeks. You actually get to enjoy both world. ";
@@ -163,7 +163,7 @@ function calculate_result($answers)
     if (($total >= 51) && ($total <= 72)) {
 
         $geekiness_level = "Uber-Geek";
-        $img = "<img src='img/uber_geek.jpg'>";
+        $img = "<img class='center_img' src='img/uber_geek.jpg'>";
         $description = "You are the gek supreme! You are likely to be interested in technology, science, gaming, 
         and geeky media such as Sci-fi and fantasy. All the mean kids that used to laugh at you in high school 
         are now begging you for a job. Be proud of your geeky nature, for geeks shall inherit the Earth!";
@@ -180,17 +180,17 @@ function calculate_result($answers)
 <html>
 <head>
     <title>Geekiness Quiz Results</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
-<h1>Quiz Result: <?= $geekiness_level; ?></h1>
-
-
-<span><?= $img; ?></span><br/> <br/>
-<p class="p_formatting"><?= $description; ?></p>
+<div class="main_div">
+    <h1>Quiz Result: <?= $geekiness_level; ?></h1>
 
 
+    <span class="center_img"><?= $img; ?></span><br/> <br/>
+    <p class="p_formatting"><?= $description; ?></p>
+
+</div>
 </body>
 </html>
 
